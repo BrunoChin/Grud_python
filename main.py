@@ -27,4 +27,4 @@ while(True):
 
 print(len(lista_usuario))
 for usuario in lista_usuario:
-    print(f"Nome: {usuario.nome} - Email: {usuario.email}")
+    print(usuario)
