@@ -43,3 +43,20 @@ class Serie(Programa):
     def __init__(self, nome, generos, ano, temporadas):
         super().__init__(nome, generos, ano)
         self.temporadas = temporadas
+
+class Playlist:
+    def __init__(self, nome, programas):
+        self.nome = nome
+        self._programas = programas
+        
+    def __getitem__(self, item):
+        return self._programas[item]
+        
+    @property
+    def listagem(self):
+        return self._programas
+    
+    @property
+    def tamanho(self):
+        return len(self._programas)
+
